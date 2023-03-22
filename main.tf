@@ -14,9 +14,8 @@ resource "azurerm_storage_account" "example" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   
-  network_rules {
+   network_rules {
     default_action             = "Allow"
-    ip_rules                   = ["10.0.0.0/8"]
   }
 
   tags = {
