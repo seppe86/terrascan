@@ -9,7 +9,9 @@ resource "azurerm_storage_account" "example" {
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  public_network_access_enabled = true
+  network_rules {
+    default_action             = "Allow"
+  }
 
   tags = {
     environment = "Demo"
