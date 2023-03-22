@@ -14,10 +14,6 @@ resource "azurerm_storage_account" "example" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   
-   network_rules {
-    default_action             = "Allow"
-  }
-
   tags = {
     environment = "Demo"
     purpose = "Terrascan"
